@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Function to calculate volume of a cube
+calculate_volume() {
+    side_length=$1
+
+    # Calculate volume
+    volume=$(echo "$side_length^3" | bc)
+
+    echo "Volume of the cube with side length $side_length is: $volume"
+}
+
+# Taking user input for side length
+read -p "Enter the side length of the cube: " side_length
+
+# Calling the function to calculate volume
+calculate_volume $side_length
+
+
+
+Save this script to a file, for example, `calculate_cube_volume.sh`, and make it executable using:
+chmod +x calculate_cube_volume.sh
+You can then run the script and enter the side length of the cube to calculate its volume.

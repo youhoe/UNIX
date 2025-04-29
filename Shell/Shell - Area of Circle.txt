@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Function to calculate area of a circle
+calculate_area() {
+    radius=$1
+    area=$(echo "3.14159 * $radius * $radius" | bc)
+    echo "Area of the circle with radius $radius is: $area"
+}
+
+# Function to calculate surface area of a sphere
+calculate_surface_area() {
+    radius=$1
+    surface_area=$(echo "4 * 3.14159 * $radius * $radius" | bc)
+    echo "Surface area of the sphere with radius $radius is: $surface_area"
+}
+
+# Taking user input for the radius
+read -p "Enter the radius of the circle/sphere: " radius
+
+# Calling the functions to calculate area and surface area
+calculate_area $radius
+calculate_surface_area $radius
+
+
+##Save this script to a file, for example, `calculate_circle_area.sh`, and make it executable using:
+chmod +x calculate_circle_area.sh
+You can then run the script and enter the radius of the circle to calculate its area and the surface area of a sphere with the same radius.

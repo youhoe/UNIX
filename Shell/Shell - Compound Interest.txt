@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Function to calculate compound interest
+calculate_interest() {
+    principal=$1
+    rate=$2
+    years=$3
+
+    # Using the formula for compound interest
+    interest=$(echo "scale=2; $principal * ((1 + ($rate / 100)) ^ $years - 1)" | bc)
+
+    echo "Compound interest after $years years: $interest"
+}
+
+# Taking user input for principal amount, rate, and years
+read -p "Enter the principal amount: " principal
+read -p "Enter the annual interest rate (in %): " rate
+read -p "Enter the number of years: " years
+
+# Calling the function to calculate compound interest
+calculate_interest $principal $rate $years
+
+
+
+##Save this script to a file, for example, `calculate_interest.sh`, and make it executable using:
+chmod +x calculate_interest.sh
+You can then run the script and enter the required inputs to calculate the compound interest.

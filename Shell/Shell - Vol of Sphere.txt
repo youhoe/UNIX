@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Function to calculate volume of a sphere
+calculate_volume() {
+    radius=$1
+    pi=$(echo "scale=10; 4*a(1)" | bc -l)
+    volume=$(echo "scale=10; (4/3) * $pi * $radius^3" | bc -l)
+    echo "Volume of the sphere with radius $radius is: $volume"
+}
+
+# Taking user input for radius
+read -p "Enter the radius of the sphere: " radius
+
+# Calling the function to calculate volume
+calculate_volume $radius
+
+
+
+Save this script to a file, for example, `calculate_sphere_volume.sh`, and make it executable using:
+chmod +x calculate_sphere_volume.sh
+You can then run the script and enter the radius of the sphere to calculate its volume.

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Function to calculate volume of cuboid
+calculate_volume() {
+    length=$1
+    width=$2
+    height=$3
+
+    # Calculate volume
+    volume=$(echo "$length * $width * $height" | bc)
+
+    echo "Volume of the cuboid with dimensions $length x $width x $height is: $volume"
+}
+
+# Taking user input for length, width, and height of the cuboid
+read -p "Enter the length of the cuboid: " length
+read -p "Enter the width of the cuboid: " width
+read -p "Enter the height of the cuboid: " height
+
+# Calling the function to calculate volume of cuboid
+calculate_volume $length $width $height
+
+
+
+Save this script to a file, for example, `calculate_cuboid_volume.sh`, and make it executable using:
+chmod +x calculate_cuboid_volume.sh
+You can then run the script and enter the length, width, and height of the cuboid to calculate its volume.

@@ -1,0 +1,11 @@
+##Counting number of lines, words and characters in a file
+#vi count.sh
+
+#!/bin/bash
+echo "StudentData File Count"
+echo "No. of lines:"
+wc -l StudentData
+echo "No. of words:"
+wc -w StudentData
+echo "No. of Characters:"
+wc -m StudentData

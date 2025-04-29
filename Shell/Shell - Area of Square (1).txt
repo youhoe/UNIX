@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Function to calculate the area of a square
+calculate_area() {
+    side=$1
+    area=$(echo "$side * $side" | bc)
+    echo "Area of the square with side $side units: $area square units"
+}
+
+# Taking user input for the side length of the square
+read -p "Enter the side length of the square: " side_length
+
+# Calling the function to calculate the area of the square
+calculate_area $side_length
+
+
+
+
+###Save this script to a file, for example, `calculate_square_area.sh`, and make it executable using:
+chmod +x calculate_square_area.sh
+You can then run the script and enter the side length of the square to calculate its area.

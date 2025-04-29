@@ -1,0 +1,28 @@
+To compute the surface area of a cube using a shell script, you can use the following script:
+
+```bash
+#!/bin/bash
+
+# Function to calculate surface area of a cube
+calculate_surface_area() {
+    side_length=$1
+
+    # Calculate surface area
+    surface_area=$(echo "6 * $side_length * $side_length" | bc)
+    echo "Surface Area of the cube with side length $side_length units: $surface_area square units"
+}
+
+# Taking user input for side length
+read -p "Enter the side length of the cube: " side_length
+
+# Calling the function to calculate surface area
+calculate_surface_area $side_length
+```
+
+Save this script to a file, for example, `calculate_cube_surface_area.sh`, and make it executable using:
+
+```bash
+chmod +x calculate_cube_surface_area.sh
+```
+
+You can then run the script and enter the side length of the cube to calculate its surface area.

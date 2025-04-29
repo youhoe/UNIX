@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Function to calculate volume of a cylinder
+calculate_volume() {
+    radius=$1
+    height=$2
+
+    # Calculate volume using the formula π * radius^2 * height
+    volume=$(echo "scale=2; 3.14159 * $radius * $radius * $height" | bc)
+
+    echo "Volume of the cylinder with radius $radius and height $height is: $volume"
+}
+
+# Taking user input for radius and height of the cylinder
+read -p "Enter the radius of the cylinder: " radius
+read -p "Enter the height of the cylinder: " height
+
+# Calling the function to calculate volume
+calculate_volume $radius $height
+
+
+
+Save this script to a file, for example, `calculate_cylinder_volume.sh`, and make it executable using:
+chmod +x calculate_cylinder_volume.sh
+You can then run the script and enter the radius and height of the cylinder to calculate its volume.
