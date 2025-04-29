@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Math::Trig qw(pi);
+
+# Input radius of the sphere
+print "Enter the radius of the sphere: ";
+my $radius = <STDIN>;
+chomp($radius);
+
+# Calculate the volume of the sphere
+my $volume = (4/3) * pi * ($radius ** 3);
+
+# Display the volume
+print "Volume of the sphere with radius $radius is: $volume\n";
+
+
+
+Save this script to a file, for example, `calculate_sphere_volume.pl`, and make it executable using:
+chmod +x calculate_sphere_volume.pl
+You can then run the script and enter the radius of the sphere to calculate its volume.

@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Math::Trig ':pi';
+
+# Input the radius and height of the cylinder
+print "Enter the radius of the cylinder: ";
+my $radius = <STDIN>;
+chomp($radius);
+
+print "Enter the height of the cylinder: ";
+my $height = <STDIN>;
+chomp($height);
+
+# Calculate the volume of the cylinder
+my $volume = pi * $radius**2 * $height;
+
+# Display the volume of the cylinder
+print "Volume of the cylinder with radius $radius and height $height is: $volume\n";
+
+
+
+Save this script to a file, for example, `calculate_cylinder_volume.pl`, and make it executable using:
+chmod +x calculate_cylinder_volume.pl
+You can then run the script and enter the radius and height of the cylinder to calculate its volume.

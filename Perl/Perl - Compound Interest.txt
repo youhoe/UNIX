@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Input variables
+my $principal = 1000;  # Principal amount
+my $rate = 0.05;       # Annual interest rate (5%)
+my $years = 5;         # Number of years
+
+# Compute compound interest
+my $compound_interest = $principal * (1 + $rate)**$years - $principal;
+
+# Print the result
+print "Compound interest after $years years: $compound_interest\n";

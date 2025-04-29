@@ -1,0 +1,6 @@
+#enter your username and display a name plate
+#!/bin/perl
+print "Enter surname:";
+$surname=<>;
+print $surname."'s Residence. Welcome!";
+

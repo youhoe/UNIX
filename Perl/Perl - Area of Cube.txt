@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Input side length of the cube
+print "Enter the side length of the cube: ";
+my $side_length = <STDIN>;
+chomp($side_length);
+
+# Calculate the surface area of the cube
+my $surface_area = 6 * ($side_length ** 2);
+
+# Display the surface area
+print "Surface Area of the cube with side length $side_length is: $surface_area\n";
+
+
+Save this script to a file, for example, `calculate_cube_surface_area.pl`, and make it executable using:
+chmod +x calculate_cube_surface_area.pl
+You can then run the script and enter the side length of the cube to calculate its surface area.

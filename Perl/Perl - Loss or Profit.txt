@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+# Taking user input for cost price and selling price
+print "Enter the cost price: ";
+my $cost_price = <STDIN>;
+chomp $cost_price;
+
+print "Enter the selling price: ";
+my $selling_price = <STDIN>;
+chomp $selling_price;
+
+# Calculating profit or loss
+my $profit_or_loss = $selling_price - $cost_price;
+
+if ($profit_or_loss > 0) {
+    print "Profit: $profit_or_loss rupees\n";
+} elsif ($profit_or_loss < 0) {
+    print "Loss: " . abs($profit_or_loss) . " rupees\n";
+} else {
+    print "No profit, no loss\n";
+}
+
+
+##Save this script to a file, for example, `calculate_profit_loss.pl`, and make it executable using:
+chmod +x calculate_profit_loss.pl
+You can then run the script and enter the cost price and selling price to compute the amount of profit or loss.

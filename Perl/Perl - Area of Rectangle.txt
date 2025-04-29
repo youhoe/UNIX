@@ -1,0 +1,48 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Function to calculate area of a rectangle
+sub calculate_area {
+    my ($length, $width) = @_;
+    my $area = $length * $width;
+    return $area;
+}
+
+# Function to calculate surface area of a rectangle
+sub calculate_surface_area {
+    my ($length, $width, $height) = @_;
+    my $surface_area = 2 * ($length * $width + $length * $height + $width * $height);
+    return $surface_area;
+}
+
+# Input values for length, width, and height (for surface area calculation)
+print "Enter the length of the rectangle: ";
+my $length = <STDIN>;
+chomp($length);
+
+print "Enter the width of the rectangle: ";
+my $width = <STDIN>;
+chomp($width);
+
+print "Enter the height of the rectangle (for surface area, or enter 0 for area only): ";
+my $height = <STDIN>;
+chomp($height);
+
+# Calculate and display area
+my $area = calculate_area($length, $width);
+print "Area of the rectangle: $area\n";
+
+# Calculate and display surface area if height is provided
+if ($height > 0) {
+    my $surface_area = calculate_surface_area($length, $width, $height);
+    print "Surface area of the rectangle: $surface_area\n";
+}
+
+
+
+
+####Save this script to a file, for example, `rectangle_area.pl`, and make it executable using:
+chmod +x rectangle_area.pl
+You can then run the script and enter the length, width, and height (if calculating surface area) of the rectangle to compute the area or surface area.

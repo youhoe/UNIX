@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Input dimensions of the cuboid
+print "Enter the length of the cuboid: ";
+my $length = <STDIN>;
+chomp($length);
+
+print "Enter the width of the cuboid: ";
+my $width = <STDIN>;
+chomp($width);
+
+print "Enter the height of the cuboid: ";
+my $height = <STDIN>;
+chomp($height);
+
+# Calculate the volume of the cuboid
+my $volume = $length * $width * $height;
+
+# Display the volume
+print "Volume of the cuboid with length $length, width $width, and height $height is: $volume\n";
+
+
+
+Save this script to a file, for example, `calculate_cuboid_volume.pl`, and make it executable using:
+chmod +x calculate_cuboid_volume.pl
+You can then run the script and enter the length, width, and height of the cuboid to calculate its volume.

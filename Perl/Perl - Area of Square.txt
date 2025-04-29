@@ -1,0 +1,37 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Function to calculate the area of a square
+sub calculate_area {
+    my $side_length = shift;
+    my $area = $side_length * $side_length;
+    return $area;
+}
+
+# Function to calculate the surface area of a square
+sub calculate_surface_area {
+    my $side_length = shift;
+    my $surface_area = 4 * $side_length;
+    return $surface_area;
+}
+
+# Input side length of the square
+print "Enter the side length of the square: ";
+my $side_length = <STDIN>;
+chomp $side_length;
+
+# Calculate area and surface area
+my $area = calculate_area($side_length);
+my $surface_area = calculate_surface_area($side_length);
+
+# Display the results
+print "Area of the square: $area\n";
+print "Surface area of the square: $surface_area\n";
+
+
+
+###Save this script to a file, for example, `square_area.pl`, and make it executable using:
+chmod +x square_area.pl
+You can then run the script and enter the side length of the square to calculate its area and surface area.

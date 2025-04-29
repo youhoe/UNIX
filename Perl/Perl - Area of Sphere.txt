@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Function to calculate the area of a sphere
+sub calculate_area {
+    my $radius = shift;
+    my $area = 4 * 3.14159 * $radius**2;
+    return $area;
+}
+
+# Function to calculate the surface area of a sphere
+sub calculate_surface_area {
+    my $radius = shift;
+    my $surface_area = 4 * 3.14159 * $radius**2;
+    return $surface_area;
+}
+
+# Taking user input for the radius
+print "Enter the radius of the sphere: ";
+my $radius = <STDIN>;
+chomp($radius);
+
+# Calculating the area and surface area
+my $area = calculate_area($radius);
+my $surface_area = calculate_surface_area($radius);
+
+# Displaying the results
+print "Area of the sphere: $area\n";
+print "Surface area of the sphere: $surface_area\n";
+
+
+##Save this script to a file, for example, `sphere_area.pl`, and make it executable using:
+chmod +x sphere_area.pl
+You can then run the script and enter the radius of the sphere to calculate its area and surface area.

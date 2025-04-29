@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Function to calculate area and circumference of a circle
+sub calculate_circle {
+    my $radius = shift;
+
+    # Calculate area
+    my $area = 3.14159 * $radius * $radius;
+
+    # Calculate circumference
+    my $circumference = 2 * 3.14159 * $radius;
+
+    return ($area, $circumference);
+}
+
+# Taking user input for radius
+print "Enter the radius of the circle: ";
+my $radius = <STDIN>;
+chomp $radius;
+
+# Calling the function to calculate area and circumference
+my ($area, $circumference) = calculate_circle($radius);
+
+# Displaying the results
+print "Area of the circle: $area\n";
+print "Circumference of the circle: $circumference\n";
+
+
+###Save this script to a file, for example, `calculate_circle.pl`, and make it executable using:
+chmod +x calculate_circle.pl
+You can then run the script and enter the radius of the circle to compute its area and circumference.

@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+# Input side length of the cube
+print "Enter the side length of the cube: ";
+my $side_length = <STDIN>;
+chomp($side_length);
+
+# Calculate the volume of the cube
+my $volume = $side_length ** 3;
+
+# Display the volume
+print "Volume of the cube with side length $side_length is: $volume\n";
+
+
+
+Save this script to a file, for example, `calculate_cube_volume.pl`, and make it executable using:
+chmod +x calculate_cube_volume.pl
+You can then run the script and enter the side length of the cube to calculate its volume.
